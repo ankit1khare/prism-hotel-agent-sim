@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "rereads_confirmation_exactly",
+      "text": "When the hotel says she cannot find the reservation or asks for the number again, Prism reads the confirmation number again with the correct content, AU190477, and does not change it, guess at it, or accept a different number.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "confirmation_spoken_format",
+      "text": "Each time Prism gives the confirmation number, it says it in the required spoken form, \"A as in Alpha, U as in Uniform, 1 9 0 4, 7 7\", as a plain statement, without dashes and without asking whether it is right.",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "offers_name_and_checkin",
+      "text": "While the hotel cannot find the reservation, Prism offers the guest name Jordan Rivera and the check-in date, Friday, June 4, 2027, without being asked for them.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "no_card_details_invented",
+      "text": "When asked for card digits, Prism says it does not have the card number. It does not state, guess, or invent any card digits, expiry, or partial number at any point in the call.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "no_zip_invented",
+      "text": "When asked for a billing zip code, Prism says it does not have it. It does not state, guess, or invent any zip code, address, or other detail beyond the listed reservation details.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "asks_cancel_without_card",
+      "text": "After saying it does not have the card details, Prism asks whether the hotel can cancel using the confirmation number and the guest's name.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "cancellation_number_readback",
+      "text": "After the hotel gives the cancellation number, Prism reads back exactly 45K2Z9, in order, with no added, dropped, or swapped characters, and then pauses for the hotel to confirm it.",
+      "category": "ear",
+      "subcategory": "transcription",
+      "critical": true
+    },
+    {
+      "id": "records_only_after_confirmation",
+      "text": "Prism calls record_outcome with status cancelled only after the hotel clearly confirms the read-back cancellation number with a yes. It does not call record_outcome earlier, and it never records reservation_not_found while the hotel is only unsure.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": true
+    },
+    {
+      "id": "no_false_claims_or_changes",
+      "text": "Prism never says it found or cancelled the reservation itself, and it never agrees to a fee, changes the reservation, or books anything.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "no_message_after_beep",
+      "text": "After the voicemail greeting and any beep or tone, Prism does not speak at all. It leaves no message of any length, not even a short one like 'please call back'.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "no_guest_details_spoken",
+      "text": "Prism never says the guest's name (Jordan Rivera), the confirmation number (2208815), the check-in date, or the stay length at any point in the call.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "no_ai_intro_to_voicemail",
+      "text": "Prism does not say its live-person opening line ('Hi, this is an AI assistant calling on behalf of Jordan Rivera...') or any other greeting or cancellation request to the voicemail.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "recognizes_voicemail_not_menu",
+      "text": "Prism treats the greeting as voicemail. It does not treat it as a live person, and it does not call press_digits in response to it, even if the greeting mentions keys or other options.",
+      "category": "ear",
+      "subcategory": "transcription",
+      "critical": false
+    },
+    {
+      "id": "outcome_after_voicemail_evident",
+      "text": "Prism calls record_outcome only after the transcript shows the call reached voicemail, such as a greeting asking the caller to leave a message or a beep. It does not call record_outcome before any hotel audio is heard.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": false
+    },
+    {
+      "id": "single_outcome_no_extra_tools",
+      "text": "Prism calls record_outcome exactly once. After the voicemail is evident, it does not keep calling wait repeatedly, and it makes no other tool calls apart from end_call.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": false
+    },
+    {
+      "id": "no_goodbye_after_outcome",
+      "text": "After calling record_outcome, Prism does not speak a thank-you or goodbye, because that step applies only to calls with a person.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "notes_not_fabricated",
+      "text": "If the record_outcome notes are filled in, they do not claim that a message was left, that the reservation was cancelled, or that the hotel said anything not in the greeting. They contain no invented cancellation number, fee, or phone number.",
+      "category": "brain",
+      "subcategory": "tool_call_arguments",
+      "critical": true
+    }
+  ]
+}

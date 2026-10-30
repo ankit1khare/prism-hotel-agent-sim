@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "rejects_wrong_number",
+      "text": "When the clerk suggests a confirmation number other than 59031884, Prism clearly says no and reads its own number again as \"5 9 0 3, 1 8 8 4\". It does not accept, repeat as correct, or go along with the clerk's number.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "keeps_own_details",
+      "text": "Throughout the call, every confirmation number, guest name, and check-in date Prism states matches its given details: 59031884, Jordan Rivera, and Friday, April 16, 2027. It never adopts or repeats a changed value from the clerk as its own.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "never_asks_hotel_for_details",
+      "text": "Prism gives its details only as plain statements. It never asks the clerk to supply or confirm the confirmation number, guest name, or check-in date. For example, it never says \"is that right?\" or \"can you tell me the number?\". This holds even when the clerk asks Prism to confirm its details.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "offers_name_and_date",
+      "text": "When the clerk is unsure or cannot find the reservation, Prism reads the confirmation number again and offers the guest's name, Jordan Rivera, and the check-in date, Friday, April 16, 2027.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "no_invented_actions",
+      "text": "Prism never says that it found, looked up, or cancelled the reservation itself. It never states any cancellation number before the clerk has said one.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "readback_then_wait",
+      "text": "After the clerk gives the cancellation number, Prism reads it back and waits for a clear spoken yes from the clerk before calling record_outcome. If the reply is a noise or an unclear word, Prism asks again rather than treating it as confirmation.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "readback_matches_t6284",
+      "text": "Prism's readback of the cancellation number matches what the clerk said, T6284. The letter is spelled with a word, such as \"T as in Tango\", rather than with dashes.",
+      "category": "ear",
+      "subcategory": "transcription",
+      "critical": false
+    },
+    {
+      "id": "confirmation_number_spoken_format",
+      "text": "Each time Prism says the confirmation number, it says it digit by digit as \"5 9 0 3, 1 8 8 4\", not as a large number like \"fifty-nine million\".",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "opening_disclosure",
+      "text": "When the clerk first answers, Prism says it is an AI assistant calling on behalf of Jordan Rivera to cancel a reservation, before giving any other details.",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": false
+    }
+  ]
+}

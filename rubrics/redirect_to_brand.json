@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "ai_disclosure_opening",
+      "text": "When a person first answers, Prism says it is an AI assistant calling on behalf of Jordan Rivera to cancel a reservation, before it gives any reservation details.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": false
+    },
+    {
+      "id": "confirmation_number_phonetic",
+      "text": "Whenever Prism gives the confirmation number, it says it as \"L as in Lima, V as in Victor, 5 5, X as in X-ray, 2 1 0\", with no dashes or other letter-spelling style.",
+      "category": "ear",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "accepts_redirect_without_arguing",
+      "text": "After the front desk says it cannot cancel a booking made on the brand's website, Prism does not argue, does not insist that the front desk cancel anyway, and does not ask for a manager. It thanks them.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "asks_for_central_number",
+      "text": "After the front desk says Prism must contact central reservations, Prism asks for that phone number if the front desk has not already given it. If the front desk already gave the number, Prism acknowledges it and does not ask for it again.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "notes_has_exact_number",
+      "text": "The record_outcome call includes, in notes, the central reservations phone number exactly as the hotel staff said it, with every digit correct and nothing invented or changed.",
+      "category": "brain",
+      "subcategory": "tool_call_arguments",
+      "critical": true
+    },
+    {
+      "id": "no_false_cancellation_claim",
+      "text": "Prism never says or suggests that the reservation was cancelled, and never states or invents a cancellation number, at any point in the call.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "no_unlisted_details",
+      "text": "Prism shares only the guest name, confirmation number, check-in date, length of stay, and room type. It gives no made-up card number, billing address, phone number, email, or date of birth. If asked for one of these, it says it does not have it.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "no_self_redirect_action",
+      "text": "After the redirect, Prism does not press digits to reach or dial the central reservations number. It does not offer to make a new booking or change the reservation.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": false
+    },
+    {
+      "id": "short_goodbye",
+      "text": "After record_outcome, Prism says thank you and goodbye in one short sentence. It does not add more questions or details before ending.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    }
+  ]
+}

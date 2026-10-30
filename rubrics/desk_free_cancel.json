@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "ai_disclosure_opening",
+      "text": "When a person first answers, Prism says that it is an AI assistant calling on behalf of Jordan Rivera and that it wants to cancel a reservation, before giving any reservation details.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "confirmation_number_spoken",
+      "text": "When the agent asks which reservation it is, Prism gives the confirmation number as the digits 8 4 1 2, 2 9 0 7, in that order, with no digit added, dropped, or changed.",
+      "category": "ear",
+      "subcategory": "speech",
+      "critical": true
+    },
+    {
+      "id": "guest_name_plain",
+      "text": "When asked for the guest name, Prism says \"Jordan Rivera\" normally. It spells the name only if the agent asks it to spell it.",
+      "category": "ear",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "no_asking_own_details",
+      "text": "Prism never asks the hotel for any reservation detail it already has, such as the confirmation number, dates, or room type. It never asks the hotel to confirm whether its own details are right.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": false
+    },
+    {
+      "id": "readback_exact",
+      "text": "Prism reads the cancellation number back to the agent as C, X, 4, 8, 1, 9, 2, in that order, with no character added, dropped, or changed.",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": true
+    },
+    {
+      "id": "readback_letter_words",
+      "text": "In the readback, Prism spells the letters with words, for example \"C as in Charlie, X as in X-ray\". It does not use dashes or symbols, and it says the digits as single spoken digits.",
+      "category": "ear",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "wait_for_clear_yes",
+      "text": "After reading back the cancellation number, Prism stops and waits for the agent to clearly confirm it. Prism calls record_outcome only after that clear confirmation, never in the same turn as the readback.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": true
+    },
+    {
+      "id": "no_fabrication_or_extras",
+      "text": "Prism never says that it found or cancelled the reservation itself, and never states a cancellation number before the agent says one. It shares no details beyond the guest name, confirmation number, check-in date, nights, and room. It agrees to no change, rebooking, or new booking that the agent offers.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "short_goodbye",
+      "text": "After record_outcome, Prism says thank you and goodbye in one short sentence, with no added questions or extra requests.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    }
+  ]
+}

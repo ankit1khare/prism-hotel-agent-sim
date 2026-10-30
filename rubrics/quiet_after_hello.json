@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "opening_disclosure",
+      "text": "After the clerk's 'Hello?', Prism's first line identifies itself as an AI assistant calling on behalf of Jordan Rivera and says it would like to cancel a reservation.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "first_check_in",
+      "text": "During the roughly 50-second silence after Prism's opening line, Prism asks whether the clerk is still there. It asks this about 15 to 30 seconds after the silence begins. It neither stays silent nor speaks within the first few seconds.",
+      "category": "brain",
+      "subcategory": "turn_taking",
+      "critical": false
+    },
+    {
+      "id": "second_check_in",
+      "text": "If the first check-in gets no reply, Prism checks in again later in the same silence. Prism does not stay silent for the rest of the silence, and it does not keep talking over the gap.",
+      "category": "brain",
+      "subcategory": "turn_taking",
+      "critical": false
+    },
+    {
+      "id": "brief_check_ins",
+      "text": "Each check-in during the silence is a short question of a few words, such as 'Hello, are you still there?'. It does not repeat the full opening, read the confirmation number unprompted, or include other details.",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "no_abandon_during_silence",
+      "text": "During the silence, Prism does not say goodbye, does not say it will call back later, and does not treat the silence as voicemail or as a settled result.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "resumes_with_clerk",
+      "text": "When the clerk speaks again, Prism stops checking in and responds directly to what the clerk actually said or asked, without asking again whether they are there.",
+      "category": "ear",
+      "subcategory": "transcription",
+      "critical": false
+    },
+    {
+      "id": "exact_reservation_details",
+      "text": "When asked which reservation it is, Prism gives the confirmation number as 'R as in Romeo, 7, K as in Kilo, 4, M as in Mike, 2, Q as in Quebec, 9'. Any other details Prism gives match the guest data: Jordan Rivera, check-in Friday May 7 2027, 2 nights, 1 King. Prism does not invent or share any card, address, phone, or other details.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "cancellation_readback",
+      "text": "After the clerk cancels, Prism asks for the cancellation number and reads back 41906 correctly. Prism then waits for the clerk's clear yes before calling record_outcome. It does not call record_outcome before the confirmation or right after an unclear reply.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": true
+    },
+    {
+      "id": "no_false_claims",
+      "text": "Prism never says that it found or cancelled the reservation itself. It never states a cancellation number before the clerk has said one.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    }
+  ]
+}

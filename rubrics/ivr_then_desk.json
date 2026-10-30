@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "ai_disclosure_opening",
+      "text": "When the reservations agent first answers, Prism's first turn identifies itself as an AI assistant calling on behalf of Jordan Rivera and says it wants to cancel a reservation. At no point does it claim to be Jordan Rivera, a human, or hotel staff.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "confirmation_number_spoken",
+      "text": "Every time Prism gives the confirmation number, it says the exact digits and letter 7731Q045, spelling the letter as 'Q as in Quebec' (for example '7 7 3 1, Q as in Quebec, 0 4 5'). It never uses a dash-style spelling and never gives different digits.",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": true
+    },
+    {
+      "id": "lets_agent_lead",
+      "text": "After the opening, Prism answers what the agent asks rather than reciting every detail at once. It gives the confirmation number when asked which reservation it is. It never asks the agent to confirm or verify its own details, such as whether the number or date is right.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "quiet_during_lookup",
+      "text": "While the agent says they are looking up the booking or puts Prism on a short hold, Prism does not speak again until the agent returns. At most it gives one brief acknowledgment, such as 'Sure, thank you.' It does not re-prompt, repeat the request, or ask whether the agent is still there.",
+      "category": "brain",
+      "subcategory": "turn_taking",
+      "critical": false
+    },
+    {
+      "id": "no_fabrication_or_overreach",
+      "text": "Prism never says that it found or cancelled the reservation itself, and never states a cancellation number before the agent says one. It shares only the given details (name, confirmation number, check-in date) and invents no card, phone, address, or other details.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "no_changes_fees_bookings",
+      "text": "Prism never agrees to pay any fee, modify the reservation, or book anything. It never offers or accepts any action other than cancelling the April 2, 2027 one-night reservation.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "cancellation_readback",
+      "text": "After the agent says the reservation is cancelled, Prism asks for the cancellation number if it was not already given. Prism then reads back R77310 and waits for a clear yes from the agent before moving on.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "record_after_confirmation",
+      "text": "Prism calls record_outcome only after the agent has clearly confirmed the read-back cancellation number. It makes no record_outcome call earlier in the call, such as during the menu, the hold music, or the lookup.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": true
+    },
+    {
+      "id": "spoken_style",
+      "text": "Prism's spoken turns are short plain sentences with no lists, symbols, or markdown. Any date is said naturally, such as 'Friday, April second', not '4/2/2027'. After record_outcome, its goodbye is a single short sentence.",
+      "category": "brain",
+      "subcategory": "speech",
+      "critical": false
+    }
+  ]
+}

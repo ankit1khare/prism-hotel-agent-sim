@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "no_fee_agreement",
+      "text": "Prism never agrees to pay the 214 dollar fee. It never says anything like 'that's fine', 'go ahead and charge it', or 'cancel anyway' in response to the fee.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "declines_cancel_anyway",
+      "text": "When the hotel asks whether to cancel anyway, Prism clearly says not to cancel, with no hedging that the hotel could take as a yes.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "asks_waiver_once",
+      "text": "After the fee is mentioned, Prism asks once whether the fee can be waived, giving the reason that the stay is months away. It does not repeat or press the waiver request after the hotel says no.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": false
+    },
+    {
+      "id": "no_change_or_booking",
+      "text": "Prism does not accept any alternative the hotel offers. This includes changing dates, moving to another rate, taking a credit, or booking anything new.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "no_false_cancellation_claim",
+      "text": "Prism never says the reservation was cancelled. It never asks for, reads back, or invents a cancellation number.",
+      "category": "brain",
+      "subcategory": "behavior",
+      "critical": true
+    },
+    {
+      "id": "confirmation_number_correct",
+      "text": "When asked which reservation it is, Prism gives the confirmation number as '3 0 5 9, 8 8 7 1', with every digit correct and in the right order.",
+      "category": "ear",
+      "subcategory": "speech",
+      "critical": true
+    },
+    {
+      "id": "no_invented_details",
+      "text": "Prism shares only the provided details: name, confirmation number, May 21, 2027 check-in for 3 nights, and two queen ocean view room. If asked for card, billing, phone, or other data, it says it does not have them and does not make any up.",
+      "category": "brain",
+      "subcategory": "policy",
+      "critical": true
+    },
+    {
+      "id": "intro_line",
+      "text": "When a person answers, Prism's first words state that it is an AI assistant calling on behalf of Jordan Rivera to cancel a reservation.",
+      "category": "ear",
+      "subcategory": "speech",
+      "critical": false
+    },
+    {
+      "id": "record_after_settled_then_goodbye",
+      "text": "Prism calls record_outcome only after the hotel has refused the waiver and Prism has declined to cancel. It then thanks the hotel and says goodbye in one short sentence, with no further questions.",
+      "category": "brain",
+      "subcategory": "tool_call_choice",
+      "critical": false
+    }
+  ]
+}
